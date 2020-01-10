@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+ ___________  ___  ___  ___________      ________  ___  ___  
+("     _   ")|"  \/"  |("     _   ")    /"       )|"  \/"  | 
+ )__/  \\__/  \   \  /  )__/  \\__/    (:   \___/  \   \  /  
+    \\_ /      \\  \/      \\_ /        \___  \     \\  \/   
+    |.  |      /\.  \      |.  |  _____  __/  \\    /\.  \   
+    \:  |     /  \   \     \:  | ))_  ")/" \   :)  /  \   \  
+     \__|    |___/\___|     \__|(_____((_______/  |___/\___| 
+-->
+
+<html lang="en">
+	<head>
+	{% block head %}
+		<meta charset="utf-8">
+		<title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+		<link rel="icon" type="image/png" href="{{ STATIC_PREFIX }}img/ico-16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="{{ STATIC_PREFIX }}img/ico-32.png" sizes="32x32">
+		<link rel="stylesheet" href="{{ STATIC_PREFIX }}css/font.css" >
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/style.css">
+
+		<script type="text/javascript" charset="utf-8" src="{{ STATIC_PREFIX }}js/quotate.js"></script>
+
+		<!-- virtual snow, had to do it -->
+		<script type="text/javascript" src="{{ STATIC_PREFIX }}js/snowstorm-min.js"></script>
+		<script type="text/javascript">
+			snowStorm.followMouse = false;
+			snowStorm.snowColor = '#f8f8ff';
+			snowStorm.flakeBottom = 100;
+			snowStorm.animationInterval = 50;
+			snowStorm.flakesMax = 64;
+			snowStorm.flakesMaxActive = 32;
+			snowStorm.targetElement = "nav";
+		</script>
+	{% endblock head %}
+	{% block head_extra %}
+	{% endblock head_extra %}
+	</head>
+
+	<body>
+
+		{% include 'header.html' %}
+		{% block content %}
+        {% endblock %}
+		{% include 'footer.html' %}
+
+	</body>
+</html>

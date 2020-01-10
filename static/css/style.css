@@ -1,0 +1,253 @@
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes rainbow{
+	0%{color: #f8f8ff;}
+	10%{color: #fea3aa;}
+	20%{color: #f8b88b;}
+	40%{color: #faf884}
+	60%{color: #baed91}
+	80%{color: #b2cefe}
+	100%{color: #f2a2e8}
+}
+
+
+html{
+	  /*body references html height for bg pattern */
+	  /*if making new radial hacks, may be useful to set height.*/
+}
+
+body {
+	/* 100% height and 100px nice too, more subtle.
+	 * swap to pastels to get gibson opal instead of
+	 * black opal */
+	margin:0;
+	background-color: #000000;
+	color:  #f8f8ff;
+	font-family: 'InformaFivesix', monospace;
+	height: 500px;
+	background-image:
+		repeating-radial-gradient(
+			farthest-corner at 50% -50000px,
+			#332020 1px,
+			#202033 2px,
+			#203320 3px
+		)
+
+}
+
+#body-opal {
+	background-color: #888888;
+	color:  #ff1493;
+	font-family: 'Inconsolata', monospace;
+	background-repeat: repeat;
+	background-size: cover;
+	height: 100%;
+	background-image:
+		repeating-radial-gradient(
+			#ffd0d0 1px,
+			#d0d0ff 2px,
+			#d0ffd0 3px
+	)
+}
+
+
+pre {
+	white-space: pre-wrap;
+	font-family: 'Inconsolata', monospace;
+}
+
+
+.barleft {
+	padding-top:16px;
+	padding-left:20px;
+	float:left;
+}
+
+.barright {
+	padding-top:16px;
+	padding-right:20px;
+	float:right;
+}
+
+
+#nav {
+	font-size: 32px;
+	height:100px;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 666;
+	animation: fadein 2s;
+}
+
+/* Links inside the navbar */
+#nav a {
+	color: #f2f2f2;
+	padding: 16px 16px;
+	text-decoration: none;
+}
+
+#nav img{
+	height: 50px;
+	margin: -20px -10px;
+	padding-top: 5px;
+}
+
+#footer {
+	font-size: 18px;
+	height:60px;
+	margin: auto;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 666;
+	background-color:#222222;
+	outline-color: #444444;
+	outline-width: 30px;
+	outline-style: ridge;
+}
+
+#footer a {
+	color: #f2f2f2;
+	padding: 16px 0px;
+	text-decoration: none;
+}
+
+#footer img{
+	height: 30px;
+	margin: -10px 16px;
+	padding-top: 5px;
+}
+
+#noteheader{
+	text-align: right;
+	background-color: #444444;
+	width: 100%;
+}
+
+.helloheader{
+	text-align: center;
+	color: black;
+	font-size: 100px;
+	font-weight: bold;
+}
+
+.btnbox{
+	text-align: center;
+	margin: 0.2em;
+	padding: 0.3em;
+	background-color: #f8f8ff;
+	box-shadow: 4px 4px  #323232;
+	border-radius: 10%;
+}
+
+.spacer{
+	padding-right:0.3em;
+}
+
+#outerbox{
+	text-align: center;
+	outline-width: 5px;
+	outline-style: double;
+	box-shadow: 30px 30px rgba(22,22,22,0.66);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background-color:  #323232;
+	overflow-wrap: break-word;
+	padding-bottom: 3em;
+	font-size:32px;
+
+}
+
+pre{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0em 2em 0em 2em;
+}
+
+
+
+#logofade {
+	align: center;
+	/* don't mess up our ascii art on mobile */
+	/* If your screen is less than 530 pixels sorry */
+	min-width: 530px;
+	font-size: 20px;
+	font-weight: normal;
+	background: repeating-radial-gradient(
+	farthest-corner at 50% 10000px,
+	#ffd0d0 1px ,#d0d0ff 5px ,#d0ffd0 10px);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-bottom: -50px;
+	padding 0px;
+}
+
+.center {
+	display: block;
+	margin: 0px auto;
+}
+
+#logoquote{
+	color: rgba(248,248,255,0.5);
+	margin:auto;
+	text-align:center;
+	max-width:530px;
+	font-size:24px;
+	font-style:italic;
+	padding-bottom:64px;
+	animation: fadein 2s;
+}
+
+.directorylisting {
+	text-align:left;
+	padding: 0px 64px;
+}
+
+.directorylisting p{
+	margin: 8px 0px;
+}
+
+.directorylisting a:link{
+	text-decoration: underline wavy;
+	color:#f8f8ff;
+}
+
+.directorylisting a:hover{
+	animation: rainbow 3s infinite;
+}
+
+#bg404{
+	background: url(../img/404/glacier-2.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	text-align:center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+
+.filltext{
+	margin-top: 5vh;
+	font-size: 50vw;
+	font-weight: bold;
+	background-image: repeating-linear-gradient(
+	-45deg,
+	transparent 0 20px,
+	white 20px 40px);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+}

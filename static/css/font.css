@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url(../font/inconsolata.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Monoamano';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../font/monoamano.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'InformaFivesix';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../font/InformaFivesix.ttf) format('truetype');
+}

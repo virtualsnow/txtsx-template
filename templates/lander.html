@@ -1,0 +1,31 @@
+{% extends "note.html" %}
+{% block note_content %}
+	<pre>
+	<div id="logofade">
+	.                   .                            
+  .o8                 .o8                            
+.o888oo oooo    ooo .o888oo      .oooo.o oooo    ooo 
+  888    `88b..8P'    888       d88(  "8  `88b..8P'  
+  888      Y888'      888       `"Y88b.     Y888'    
+  888 .  .o8"'88b     888 . .o. o.  )88b  .o8"'88b   
+  "888" o88'   888o   "888" Y8P 8""888P' o88'   888o 
+	</div>
+	</pre>
+
+	<p id="logoquote"><i>"Javascript is literally the worst."</i></p>
+	<img width="100px"  src="{{ STATIC_PREFIX }}img/black_hand.gif"></img>
+
+	<div id="directory">
+		<p class="serverstatus">status: [online] [9/9] </class>
+
+		<hr>
+		<h3> ~ directory ~ </h1>
+		<div class="directorylisting">
+			<p>↳ <a href="https://readme.txt.sx">readme.txt.sx</a> - words written</p>
+			<p>↳ <a href="https://code.txt.sx">code.txt.sx</a> - codes written </p>
+			<p>↳ <a href="https://paste.txt.sx">paste.txt.sx</a> - self-destructing pastes</p>
+			<p>↳ <a href="https://mirror.txt.sx">mirror.txt.sx</a> - dynamic DNS, open to all.</p>
+		</div>
+	</div>
+{% endblock note_content %}
+
