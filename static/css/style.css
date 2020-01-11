@@ -7,41 +7,58 @@
 	0%{color: #f8f8ff;}
 	10%{color: #fea3aa;}
 	20%{color: #f8b88b;}
-	40%{color: #faf884}
-	60%{color: #baed91}
-	80%{color: #b2cefe}
-	100%{color: #f2a2e8}
+	40%{color: #faf884;}
+	60%{color: #baed91;}
+	80%{color: #b2cefe;}
+	100%{color: #f2a2e8;}
+}
+
+
+@keyframes darkrainbow{
+	0%{color: #a8a8af;}
+	10%{color: #ae535a;}
+	20%{color: #a8683b;}
+	40%{color: #aaa834;}
+	60%{color: #6abd41;}
+	80%{color: #627eae;}
+	100%{color: #a252b8;}
+}
+
+/* get rid of nasty scrollbar for dark theme.*/
+* {
+    scrollbar-color: #2f2f2f #1c1e1f;
 }
 
 
 html{
-	  /*body references html height for bg pattern */
-	  /*if making new radial hacks, may be useful to set height.*/
+	/*body references html height for bg pattern */
+	/*if making new radial hacks, may be useful to set height.*/
+	height: 100%;
 }
 
-body {
+body{
+	margin:0;
+	background-color: #202020;
+	color:  #f8f8ff;
+	font-family: 'InformaFivesix', monospace;
+}
+
+#body-black-opal {
 	/* 100% height and 100px nice too, more subtle.
 	 * swap to pastels to get gibson opal instead of
 	 * black opal */
-	margin:0;
-	background-color: #000000;
-	color:  #f8f8ff;
-	font-family: 'InformaFivesix', monospace;
-	height: 500px;
+	height: 100vh;
 	background-image:
 		repeating-radial-gradient(
 			farthest-corner at 50% -50000px,
 			#332020 1px,
 			#202033 2px,
 			#203320 3px
-		)
-
+		);
 }
 
 #body-opal {
-	background-color: #888888;
 	color:  #ff1493;
-	font-family: 'Inconsolata', monospace;
 	background-repeat: repeat;
 	background-size: cover;
 	height: 100%;
@@ -57,6 +74,7 @@ body {
 pre {
 	white-space: pre-wrap;
 	font-family: 'Inconsolata', monospace;
+	text-align:center;
 }
 
 
@@ -84,6 +102,14 @@ pre {
 	animation: fadein 2s;
 }
 
+/*white text can get confusing with the body text on scroll
+ * until JS collapse is added, use a media query to improve
+ * navbar looks.*/
+@media  (max-width: 700px) {
+	#nav{
+		position:absolute;
+	}
+}
 /* Links inside the navbar */
 #nav a {
 	color: #f2f2f2;
@@ -110,6 +136,11 @@ pre {
 	outline-width: 30px;
 	outline-style: ridge;
 }
+@media  (max-width: 700px) {
+	#footer{
+		position:static;
+	}
+}
 
 #footer a {
 	color: #f2f2f2;
@@ -123,10 +154,48 @@ pre {
 	padding-top: 5px;
 }
 
-#noteheader{
-	text-align: right;
-	background-color: #444444;
-	width: 100%;
+#cleanbox{
+	min-height: 82vh;
+	max-width: 64rem;
+	margin: auto;
+	text-align: left;
+	padding: 12vh 5% 6vh 5%;
+	font-size:21px;
+	font-family:"times,times new roman,serif";
+	letter-spacing:0.25px;
+	overflow-wrap: break-word;
+}
+#cleanbox a{
+	animation: rainbow 20s infinite;
+	text-decoration:none;
+}
+#cleanbox p{
+	line-height:1.6;
+}
+
+#cleanbox a:visited{
+	color: #a8a8af;
+}
+
+
+#cleanbox h1{
+	font-size:3rem;
+	font-weight:400;
+}
+
+#cleanbox h2{
+	font-size:2.5rem;
+	font-weight:400;
+}
+
+#cleanbox h3{
+	font-size:2rem;
+	font-weight:400;
+}
+
+#cleanbox h4{
+	font-size:1.5rem;
+	font-weight:400;
 }
 
 .helloheader{
@@ -134,6 +203,41 @@ pre {
 	color: black;
 	font-size: 100px;
 	font-weight: bold;
+}
+
+
+#notebox{
+	text-align: center;
+	outline-width: 5px;
+	outline-style: double;
+	box-shadow: 30px 30px rgba(22,22,22,0.66);
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+
+	/*
+	min-height: 50vh;
+	max-width: 40rem;
+	padding: 0 0 0 0;
+	margin: auto;
+	*/
+
+	background-color:  #323232;
+	overflow-wrap: break-word;
+	padding-bottom: 3em;
+	font-size:32px;
+
+}
+
+
+#noteheader{
+	text-align: right;
+	background-color: #444444;
+	width: 100%;
 }
 
 .btnbox{
@@ -149,22 +253,6 @@ pre {
 	padding-right:0.3em;
 }
 
-#outerbox{
-	text-align: center;
-	outline-width: 5px;
-	outline-style: double;
-	box-shadow: 30px 30px rgba(22,22,22,0.66);
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	background-color:  #323232;
-	overflow-wrap: break-word;
-	padding-bottom: 3em;
-	font-size:32px;
-
-}
 
 pre{
 	margin-top: 0px;
@@ -173,11 +261,9 @@ pre{
 }
 
 
-
 #logofade {
-	align: center;
 	/* don't mess up our ascii art on mobile */
-	/* If your screen is less than 530 pixels sorry */
+	/* If your screen is less than 530 pixels get sad ascii */
 	min-width: 530px;
 	font-size: 20px;
 	font-weight: normal;
@@ -190,6 +276,14 @@ pre{
 	padding 0px;
 }
 
+@media  (max-width: 600px) {
+	#logofade{
+		font-size:14px;
+		min-width: 400px;
+	}
+
+}
+
 .center {
 	display: block;
 	margin: 0px auto;
@@ -199,7 +293,7 @@ pre{
 	color: rgba(248,248,255,0.5);
 	margin:auto;
 	text-align:center;
-	max-width:530px;
+	max-width:500px;
 	font-size:24px;
 	font-style:italic;
 	padding-bottom:64px;

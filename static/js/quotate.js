@@ -79,6 +79,10 @@ var quotes = [
 	"Process over product.",
 	"Money as a sideproduct.",
 	"Ziplocks and baking soda.",
+	"Contact light. Okay, engine stop. ACA out of detent. Modes control both auto, descent engine command override, off.",
+	"-cherry mx blue clickity noises-",
+	"High Delta-O-18 ice cores, guaranteed.",
+
 ];
 
 window.onload = function(){

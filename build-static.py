@@ -4,7 +4,7 @@ from pathlib import Path
 from shutil import copytree,rmtree
 import os
 
-final_templates = ['lander.html', '404.html']
+final_templates = ['lander.html', '404.html', 'contact.html']
 static_dir = "static"
 
 def make_output_dir(output_dir):
