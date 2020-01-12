@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ SITENAME }}{% endblock %}
+
+{% block content %}
+    <ul>
+	<h2>~/txts/ $: ls -lha</h2>
+	dr-xr-xr-x  3 root root 4K Oct 13 00:37 .<br>
+	dr-xr-xr-x  3 root root 4K Oct 13 00:37 <a href="/">..</a><br>
+    {% for tag, articles in tags|sort %}
+	dr-xr-xr-x {{ articles|count }} root root {{ articles|count }}K {{ (articles | first).date |strftime('%b %d %H:%M') }} <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a><br>
+    {% endfor %}
+    </ul>
+{% endblock %}
+

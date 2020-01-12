@@ -17,7 +17,12 @@ function hourstr(){
 	else{
 		return ((hour < 12)? String(hour) + " AM" : String(hour%12) + " PM");
 	}
-}
+};
+
+function getday(){
+	var today = new Date();
+	return today.getDay();
+};
 
 
 var quotes = [
@@ -82,6 +87,12 @@ var quotes = [
 	"Contact light. Okay, engine stop. ACA out of detent. Modes control both auto, descent engine command override, off.",
 	"-cherry mx blue clickity noises-",
 	"High Delta-O-18 ice cores, guaranteed.",
+	"If you don't believe me or don't get it, I don't have time to try to convince you, sorry.",
+	"If you never post or say anything they can never get you with the stylometry.",
+	"This message no longer available due to a copyright claim by UMG.  Sorry about that.",
+	"wtb angelic halo",
+	(((getday()+3)%6===3)?"hell yea, it's the weekend!!!!":"Ugh, can't wait for the week to be over."),
+
 
 ];
 
