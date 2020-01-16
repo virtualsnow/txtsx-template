@@ -227,3 +227,6 @@ tags
 
 #output directory from static generation scripts
 output
+
+#Dockerfiles, so ansible can drop custom Dockerfiles to the cloned repo.
+Dockerfile
