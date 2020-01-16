@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #Do not use for production.
 from flask import Flask, render_template, request
 
