@@ -92,6 +92,9 @@ var quotes = [
 	"This message no longer available due to a copyright claim by UMG.  Sorry about that.",
 	"wtb angelic halo",
 	(((getday()+3)%6===3)?"hell yea, it's the weekend!!!!":"Ugh, can't wait for the week to be over."),
+	"Murdered out rainbows.",
+	"Now my Uzi up on Instagram.",
+
 
 
 ];

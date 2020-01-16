@@ -1,3 +1,4 @@
+#!/usr/bin/python
 #builds a static version of site for deployment into /output
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from pathlib import Path
