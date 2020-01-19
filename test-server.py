@@ -20,10 +20,15 @@ def test_404():
 def test_contact():
     return render_template('directory/contact.html',STATIC_PREFIX='/static/')
 
+@app.route('/test_long')
+def test_long():
+    return render_template('directory/test_long.html',STATIC_PREFIX='/static/')
+
 if __name__ == "__main__":
     print("Routes:")
     print("/")
     print("/skeleton")
     print("/404")
     print("/contact")
+    print("/test_long")
     app.run()

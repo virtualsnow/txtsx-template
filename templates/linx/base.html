@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{{ sitename }}{% endblock %}</title>
+	<meta charset='utf-8' content='text/html' http-equiv='content-type'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link href='{{ sitepath }}static/linx/css/linx.css?v=1' media='screen, projection' rel='stylesheet' type='text/css'>
+	<link href='{{ sitepath }}static/linx/css/hint.css' rel='stylesheet' type='text/css'>
+
+
+	<link rel="icon" type="image/png" href="{{ sitepath }}static/img/ico-16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="{{ sitepath }}static/img/ico-32.png" sizes="32x32">
+	<link rel="stylesheet" href="{{ sitepath }}static/css/font.css" >
+	<link rel="stylesheet" type="text/css" href="{{ sitepath }}static/css/style.css">
+
+
+	{% block head %}{% endblock %}
+</head>
+
+<body>
+	<!--
+	<div id="container_container">
+		<div id="container"> -->
+		{% include '../base/header.html' %}
+
+		<div id="body-black-opal">
+			<div id="cleanbox">
+				<div id="notebox">
+					<div id="noteheader">
+						<a href="{{ sitepath }}API/"><img class="btnbox" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgElEQVQYlX2PwQmAMBAEpwkhkAIEC7BOyxAEv34FO/AlCL4EX4JgAfHhKmdQFw7CZMhl4YwHSmDWlGKPpMAKhGhWILNipYsWyDWtWG3FTdAZ5sT2N9H+yZv1d2rBRi85nYNK3ck+ygRgiNt7lVqACSiAXvIYy3ESIw9/4iV3QHcAH/stDdC3hoEAAAAASUVORK5CYII=" /></a>
+						<a href="{{ sitepath }}paste/"><img class="btnbox" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAU0lEQVQYlZ2QQQoAIAgE522dgl7VA3pPp95WlwyrpUMLouKgiwAN6I8oTHUgCCC5OhsIUAVc3bIFvrSBymtToHk1hWO2N+rkFxhdNsVjJt9yvWkA1lo8H5aHVmYAAAAASUVORK5CYII=" /></a>
+						<a href="{{ sitepath }}"><img class="btnbox" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAaElEQVQYlXXOQQbEQBAF0HeJJuT+NwhZzTarMAwh9GEmm2pKd7opza9HfdjxQTG+ErsdfvjHXzqUd1bUCC4sMVdkNYyG74QbujN6w1OkO5drTFF96Tygdq7vvMA56ZTxF7bAQ5/IDmwPs8Uvhm1i47EAAAAASUVORK5CYII=" /></a>
+						<a class="spacer"></a>
+					</div>
+				<div id="notetext">
+					{% block content %}{% endblock %}
+				</div>
+			</div>
+		</div>
+
+			{% include '../base/footer.html' %}
+
+			<!--
+			<div id="footer">
+				<a href="https://github.com/andreimarcu/linx-server">linx</a>
+			</div>
+			-->
+	<!--
+		</div>
+	</div>
+	-->
+</body>
+</html>

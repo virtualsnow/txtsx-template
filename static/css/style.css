@@ -47,7 +47,8 @@ body{
 	/* 100% height and 100px nice too, more subtle.
 	 * swap to pastels to get gibson opal instead of
 	 * black opal */
-	height: 100vh;
+
+	min-width: 580px;
 	background-image:
 		repeating-radial-gradient(
 			farthest-corner at 50% -50000px,
@@ -153,14 +154,14 @@ pre {
 }
 @media  (max-width: 700px) {
 	#footer{
-		position:static;
+		/* position:static; */
 		top:94vh;
 	}
 }
 
 @media  (max-width: 480px) {
 	#footer{
-		position:static;
+		/*position:static;*/
 		top:94vh;
 		min-height:120px;
 	}
@@ -183,42 +184,48 @@ pre {
 	min-height: 74vh;
 	max-width: 64rem;
 	margin: auto;
-	text-align: left;
 	padding: 13vh 5% 13vh 5%;
+
+}
+
+.articletext{
+	text-align: left;
 	font-size:21px;
-	font-family:"times,times new roman,serif";
+	font-family:"times, times new roman, serif";
 	letter-spacing:0.25px;
 	overflow-wrap: break-word;
+	line-height: 1.6;
 }
-#cleanbox a{
+
+.articletext a{
 	animation: rainbow 20s infinite;
 	text-decoration:none;
 }
-#cleanbox p{
+.articletext p{
 	line-height:1.6;
 }
 
-#cleanbox a:visited{
+.articletext a:visited{
 	color: #a8a8af;
 }
 
 
-#cleanbox h1{
+.articletext h1{
 	font-size:3rem;
 	font-weight:400;
 }
 
-#cleanbox h2{
+.articletext h2{
 	font-size:2.5rem;
 	font-weight:400;
 }
 
-#cleanbox h3{
+.articletext h3{
 	font-size:2rem;
 	font-weight:400;
 }
 
-#cleanbox h4{
+.articletext h4{
 	font-size:1.5rem;
 	font-weight:400;
 }
@@ -230,8 +237,26 @@ pre {
 	font-weight: bold;
 }
 
-
 #notebox{
+	text-align: center;
+	outline-width: 5px;
+	outline-style: double;
+	box-shadow: 30px 30px rgba(22,22,22,0.66);
+	background-color:  #323232;
+	overflow-wrap: break-word;
+	font-size:32px;
+	min-width: 530px;
+}
+
+#notetext{
+	padding: 1.5em;
+	text-align: center;
+
+
+}
+
+
+#notebox-old{
 	text-align: center;
 	outline-width: 5px;
 	outline-style: double;
@@ -243,12 +268,6 @@ pre {
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 
-	/*
-	min-height: 50vh;
-	max-width: 40rem;
-	padding: 0 0 0 0;
-	margin: auto;
-	*/
 
 	background-color:  #323232;
 	overflow-wrap: break-word;

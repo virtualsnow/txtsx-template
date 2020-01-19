@@ -1,0 +1,32 @@
+{% extends "../base.html" %}
+
+{% block title %}{{ filename }}{% endblock %}
+
+{% block bodymore %}{% endblock %}
+
+{% block content %}
+
+    <div id="info" class="dinfo info-flex">
+        <div id="filename">
+			{{ filename }}   ( <span>{{ size }}</span> ) {% if expiry %} (<span> {{ expiry }}</span>) {% endif %}
+        </div>
+
+        <div class="info-actions">
+            {% block infomore %}{% endblock %}
+            <a href="{{ filename }}/torrent" download>torrent</a> |
+            <a href="{{ sitepath }}{{ selifpath }}{{ filename }}" download>get</a>
+        </div>
+
+        {% block infoleft %}{% endblock %}
+    </div>
+
+    <div id="main" {% block mainmore %}{% endblock %}>
+
+      <div id='inner_content' {% block innercontentmore %}{% endblock %} >
+      {% block main %}{% endblock %}
+      </div>
+
+    </div>
+
+    <script src="{{ sitepath }}static/linx/js/clipboard.js"></script>
+{% endblock %}
