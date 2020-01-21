@@ -25,7 +25,7 @@ def generate_static(output_dir="./output", static_prefix="/static/"):
     make_output_dir(output_dir)
 
     for leaf in final_templates:
-        leaf_template = env.get_template(leaf)
+        leaf_template = env.get_template("directory/"+leaf)
         leaf_html = leaf_template.render(foo='bar', STATIC_PREFIX=static_prefix)
         print("Writing {} to {}...".format(leaf, output_dir+"/"+leaf))
         with open(output_dir+"/"+leaf, "w+") as f:
