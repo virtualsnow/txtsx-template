@@ -361,6 +361,11 @@ pre{
 	animation: rainbow 3s infinite;
 }
 
+.directorylisting a:visited{
+	text-decoration: underline wavy;
+	color:#a8c8aa;
+}
+
 #bg404{
 	background: url(../img/404/glacier-2.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
